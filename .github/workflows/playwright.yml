@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright Google Demo Test
 on:
   push:
     branches: [ develop ]
