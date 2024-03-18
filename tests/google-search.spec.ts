@@ -1,6 +1,12 @@
 import { test, expect } from '@playwright/test';
 
+
 test('google search', async({ page }) => {
+  // Accept coockies by handler
+  await page.addLocatorHandler(page.locator('#uMousc'), async () => {
+    await page.getByRole('button', { name: 'Accept all' }).click();
+  });
+
   await page.goto('https://google.com');
 
   // Search input locator
