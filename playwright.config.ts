@@ -35,18 +35,19 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: 
-        { ...devices['Desktop Chrome'], 
-          //headless: false, 
-          // launchOptions: { slowMo: 800 }
-        },
+      use:
+      {
+        ...devices['Desktop Chrome'],
+        headless: false,
+        // launchOptions: { slowMo: 800 }
+      },
     },
 
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
     // },
-  
+
     // {
     //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },
@@ -65,7 +66,7 @@ export default defineConfig({
     /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge', headless: false },
     // },
     // {
     //   name: 'Google Chrome',
