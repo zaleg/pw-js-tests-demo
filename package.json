@@ -1,14 +1,20 @@
 {
   "name": "pw-js-tests-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Google search demo Paywright e2e tests.",
   "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.8.7"
+  },
   "scripts": {},
   "keywords": [],
   "author": "zaleg",
   "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.48.2",
-    "@types/node": "^20.14.2"
+  "dependencies": {
+    "playwright": "^1.48.2"
   }
 }
