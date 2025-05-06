@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
 
-test.beforeEach(async( {page} ) => {
+test.beforeEach(async ({ page }) => {
   await page.goto('https://google.com');
 });
 
-test('google search', async({ page }) => {
-  // Accept coockies by handler
+test('google search', async ({ page }) => {
+  // Accept cookies by handler
   await page.addLocatorHandler(page.locator('#uMousc'), async () => {
     await page.getByRole('button', { name: 'Accept all' }).click();
   });
@@ -21,5 +21,5 @@ test('google search', async({ page }) => {
   await page.getByRole('link', { name: 'Get started' }).click();
 
   // Assert
-  await expect(page.getByRole('heading', { level: 1} )).toHaveText('Installation')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Installation');
 });
